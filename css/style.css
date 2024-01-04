@@ -429,12 +429,11 @@ header .nav_container ul a#first {
 .home .wrapper_home {
   height: fit-content;
 }
-@media all and (min-height: 400px) {
+@media all and (min-height: 300px) {
   .home .wrapper_home {
     height: 100dvh;
   }
 }
-
 section.home {
   background-image: url("../images/background_images2.png");
   background-repeat: no-repeat;
