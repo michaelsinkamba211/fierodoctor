@@ -434,6 +434,7 @@ header .nav_container ul a#first {
     height: 100dvh;
   }
 }
+
 section.home {
   background-image: url("../images/background_images2.png");
   background-repeat: no-repeat;
@@ -520,7 +521,8 @@ section .home_contents {
 
 .services,
 .about,
-.department_section {
+.department_section,
+.doctors {
   max-width: 1200px;
   width: 100%;
   padding: 0 10px;
@@ -1140,4 +1142,165 @@ aside .aside_container .right{
   .department_section nav a.active::before{
     left: 47%;
   }
+}
+
+
+
+/* doctors */
+
+
+
+.doctors .sub_title {
+  align-self: center;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000000;
+  position: relative;
+}
+
+.doctors .ti {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 80px 5px;
+  margin-bottom: 40px;
+}
+
+.doctors h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+
+  font-size: 34px;
+    font-weight: 800;
+}
+
+
+@media screen and (max-width:500px){
+.doctors.services {
+    margin-top: -10px;
+
+  }
+}
+
+.doctors .all_services {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.doctors .all_services .service {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+
+
+.doctors .service .first {
+  background: url(../images/doc-1.jpg);
+}
+
+.doctors .service .second {
+  background: url(../images/doc-2.jpg);
+}
+
+
+.doctors .service .third {
+  background: url(../images/doc-3.jpg);
+}
+
+
+.doctors .service .fourth {
+  background: url(../images/doc-4.jpg);
+}
+
+
+.doctors .service .icon {
+  height:300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-position: top center;
+  transition: all 0.3s ease;
+}
+
+.doctors .service_text{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 10px;
+}
+
+.doctors .service_text .socials{
+  position: absolute;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: -50px;
+  height: 0px;
+  background-color: #fff;
+  transition: all .3s ease-in-out;
+  align-items: center;
+  width: 100%;
+  opacity: 0;
+}
+
+.doctors .service_text .socials .fa-brands{
+  color: var(--main-color);
+}
+
+.doctors .service_text .socials .fa-brands:hover{
+  color: var(--secondary-color);
+}
+
+.doctors .all_services .service:hover .socials{
+  height: 41px;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+  transform: scale(1.03);
+}
+
+.doctors .all_services .service:hover .icon{
+  transition: all .3s ease-in-out;
+  transform: scale(1.03);
+}
+
+
+
+.doctors .service_text h3 {
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 24px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.doctors .all_services .service:hover :is(h3){
+  color: var(--primary-color);
+}
+
+.doctors .service_text h4 {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #fff;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+}
+
+.doctors .service .service_text p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  font-weight: 450;
 }
