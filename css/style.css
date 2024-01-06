@@ -858,6 +858,23 @@ aside .aside_container .right{
   display: block;
 }
 
+.department_section .content-section {
+  transform: translateX(-0%);
+  animation: fadeOutUps 0.3s ease-out;
+}
+
+
+@keyframes fadeOutUps {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(-0%);
+  }
+}
+
+
 .department_section nav {
   margin-bottom: 20px;
 }
@@ -1479,11 +1496,11 @@ aside .aside_container .right{
 
 .testimonials .all_testimonials .actives {
   transform: translateX(0%);
-  animation: fadeOutUp 0.3s ease-in-out;
+  animation: fadesOutUp 0.3s ease-in-out;
 }
 
 
-@keyframes fadeOutUp {
+@keyframes fadesOutUp {
   from {
     transform: translateX(50%);
   }
