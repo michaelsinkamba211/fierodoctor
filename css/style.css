@@ -523,14 +523,16 @@ section .home_contents {
 .testimonials,
 .contact_wrapper,
 .pricing,
-.blogs {
+.blogs,
+.footer_wrapper {
   max-width: 1200px;
   width: 100%;
   padding: 0 10px;
-  margin: 0 auto;
+  margin: 50px auto;
 
   /* background: #fafafa !important; */
 }
+
 
 section.services {
   margin-top: -50px;
@@ -734,7 +736,6 @@ section.services {
 aside {
   background: url("../images/aside_image.webp") center/cover no-repeat;
   width: 100%;
-  margin: 70px 0;
   padding: 70px 0;
   position: relative;
   z-index: 1;
@@ -1339,11 +1340,6 @@ aside .aside_container .right {
   border-radius: 12px;
 }
 
-/* @media all and (max-width:600px){
-  .all_testimonials .testify .image{
-    width: 320px;
-    height: 120px;
-  } */
 
 .testimonials .all_testimonials .testify {
   gap: 20px;
@@ -1444,7 +1440,6 @@ aside .aside_container .right {
 
 
 .contacts {
-  margin: 50px 0;
   width: 100%;
   position: relative;
   padding: 0 10px;
@@ -1694,7 +1689,7 @@ textarea:focus {
 
 .second .all_divs div h3 {
   font-size: 2.8rem;
-  font-weight: 800;
+  font-weight: 900;
   color: var(--primary-color);
 }
 
@@ -1728,9 +1723,7 @@ textarea:focus {
 
 
 /* pricing */
-.pricing{
-  margin: 30px auto;
-}
+
 .pricing .sub_title {
   align-self: center;
   margin-bottom: 20px;
@@ -1756,7 +1749,7 @@ textarea:focus {
   text-align: center;
   width: 100%;
   font-size: 1.8rem;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 
@@ -1796,7 +1789,7 @@ textarea:focus {
 .pricing .service .category h2{
   font-size: 28px;
   font-size: 1.7rem;
-  font-weight: 550;
+  font-weight: 600;
 }
 
 .pricing .service .price h3 {
@@ -1814,7 +1807,8 @@ textarea:focus {
 .pricing .service .price h3 span{
   font-size: .8rem;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.7)
+  color: rgba(0, 0, 0, 0.7);
+  
 }
 
 .pricing .service .services_offered ul{
@@ -1896,9 +1890,7 @@ textarea:focus {
   }
 }
 
-.blogs{
-  margin: 50px auto;
-}
+
 
 .blogs .all_blogs {
   display: grid;
@@ -2037,4 +2029,19 @@ textarea:focus {
   line-height: 1.8rem;
   font-weight: 450;
   text-align: left;
+}
+
+
+/* footer */
+
+footer{
+  background: #141313;
+  color: rgba(255, 255, 255, 0.8);
+}
+.footer_wrapper{
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+  gap: 30px;
+  margin: 40px auto;
 }
