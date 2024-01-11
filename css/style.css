@@ -1896,6 +1896,10 @@ textarea:focus {
   }
 }
 
+.blogs{
+  margin: 50px auto;
+}
+
 .blogs .all_blogs {
   display: grid;
   gap: 30px;
@@ -1919,15 +1923,15 @@ textarea:focus {
 }
 
 .blogs .blog .first {
-  background: url(../images/doc-1.jpg);
+  background: url(../images/image_1.jpg);
 }
 
 .blogs .blog .second {
-  background: url(../images/doc-2.jpg);
+  background: url(../images/image_2.jpg);
 }
 
 .blogs .blog .third {
-  background: url(../images/doc-4.jpg);
+  background: url(../images/image_3.jpg);
 }
 
 
