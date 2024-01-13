@@ -2037,11 +2037,249 @@ textarea:focus {
 footer{
   background: #141313;
   color: rgba(255, 255, 255, 0.8);
+  padding: 20px 10px;
+  font-size: .9rem;
 }
+
+footer .all_rights{
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width:800px){
+  footer .all_rights{
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width:600px){
+  footer .all_rights{
+    flex-direction: column;
+  }
+  
+}
+
+
 .footer_wrapper{
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
   gap: 30px;
   margin: 40px auto;
+}
+
+
+/* first styles */
+.footer_wrapper .first{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer_wrapper .first .have_questions{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer_wrapper h3{
+  color: var(--main-color);
+  font-size: 1.3rem;
+  letter-spacing: 1.3px;
+}
+
+.first .have_questions ul{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.first .have_questions ul li{
+  padding: 0 10px;
+  color: #fff;
+}
+.first .have_questions ul i{
+  color: #fff;
+  align-items: center;
+  display: inline-block;
+  padding: 0 0px;
+  margin-right: 15px;
+}
+
+/* first then icons */
+
+.footer_wrapper .first .icons{
+  display: flex;
+  align-items: center; 
+}
+
+
+.footer_wrapper .first .icons a{
+  display: block;
+  margin-right:15px;
+  font-size: 1.2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  background: #665e5e;
+}
+
+.footer_wrapper .first .icons a i{
+  color: #fff;
+  display: block;
+  line-height: 35px;
+}
+
+
+
+.footer_wrapper .first .logo p{
+  margin: 10px 0;
+}
+
+.footer_wrapper .doc_logo {
+  font-weight: 900;
+  font-size: 1.29rem;
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.footer_wrapper :is(#special, .icon) {
+  color: var(--primary-color);
+  align-self: center;
+}
+
+/* second styles */
+
+.footer_wrapper .second{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer_wrapper .second .links{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.footer_wrapper  .second .links ul{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer_wrapper li a{
+  cursor: pointer;
+  color: #fff;
+}
+.footer_wrapper .second .links ul li{
+  list-style: none;
+}
+
+.footer_wrapper .second .fa-solid{
+  margin-right: 7px;
+  font-size: .6rem;
+}
+
+/* third styles */
+
+.footer_wrapper .third .our_recent_blog{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer_wrapper .third .our_recent_blog p{
+  margin-top: -5px;
+}
+
+.third .our_recent_blog :is(.first_recent_blog, .second_recent_blog){
+display: flex;
+gap: 17px;
+}
+
+
+.third .our_recent_blog .image{
+  height: 90px;
+  aspect-ratio: 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.third .our_recent_blog .one{
+  background-image: url(../images/bg_1.jpg.webp);
+}
+
+.third .our_recent_blog .two{
+  background-image: url(../images/bg_2.jpg.webp);
+}
+.third .our_recent_blog .links{
+  font-size: .75rem;
+  margin-top: 8px !important;
+}
+.third .our_recent_blog i{
+  display: inline-block;
+  color: gray;
+}
+
+.third .our_recent_blog .content{
+  font-size: 1rem;
+}
+
+/* fourth */
+
+.footer_wrapper .fourth{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer_wrapper .fourth .oppening_hours{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.fourth .oppening_hours p{
+  font-size: 1rem;
+  margin-left: 15px;
+}
+.fourth .oppening_hours p i{
+  margin-right: 6px;
+  color: gray;
+}
+.footer_wrapper .fourth .subscribe form{
+  display: flex;
+  flex-direction: column;
+}
+
+.fourth .subscribe form :is(input, button){
+  height: 45px;
+  border: none !important;
+  margin: 8px 0;
+  font-size: 1rem;
+  border-radius: 12px;
+}
+
+.fourth .subscribe form input{
+  -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: none;
+    color: rgba(255, 255, 255, 0.7) !important;
+    text-align: center;
+}
+
+.fourth .subscribe form button{
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
 }

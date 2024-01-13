@@ -695,7 +695,7 @@
         </div>
 
     </section>
-<!-- doctors -->
+    <!-- doctors -->
     <section class="doctors">
         <div class="ti">
             <p class="sub_title">DOCTORS</p>
@@ -832,7 +832,7 @@
             </div>
         </div>
     </section>
-<!-- testimonials -->
+    <!-- testimonials -->
     <section class="testimonials">
         <div class="ti">
             <p class="sub_title">TESTIMONIALS</p>
@@ -1013,7 +1013,7 @@
             </ul>
         </nav>
     </section>
-<!-- contacts -->
+    <!-- contacts -->
     <section class="contacts">
         <div class="contact_wrapper">
             <div class="first">
@@ -1036,13 +1036,13 @@
                             <option value="heart_rate">HEART RATE</option>
                             <option value="emergency_care">Emergency Care</option>
                         </select>
-                        <input type="date" id="dob" name="dob" value="yyyy-mm-dd">
+                        <input type="date" id="dob" name="dob" value="yyyy-mm-dd" required>
                         <textarea name="" id="" cols="40" rows="2">Message</textarea>
                     </div>
 
                     <div class="right">
-                        <input type="text" name="lastname" id="lastname" value="Last Name">
-                        <input type="number" name="phone" id="phone" placeholder="+26">
+                        <input type="text" name="lastname" id="lastname" value="Last Name" required>
+                        <input type="number" name="phone" id="phone" placeholder="+26" required>
 
 
                         <select id="time" name="time">
@@ -1083,7 +1083,7 @@
             </div>
         </div>
     </section>
-<!-- pricings -->
+    <!-- pricings -->
     <section class="pricing">
         <div class="ti">
             <p class="sub_title">PRICING</p>
@@ -1226,18 +1226,19 @@
                 </div>
 
                 <div class="service_text">
-                   
+
                     <h3>Scary Thing That You Don’t Get Enough Sleep</h3>
-                
+
                     <p>
-                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts.
                     </p>
                 </div>
                 <div class="orther_buttons">
-                    <a href="#">Read More <i class="fa-solid fa-beat-fade fa-arrow-right"></i></a>
-                    <a href="#">Admin <i class="fa-regular fa-beat-fade fa-message"></i> <sub>3</sub></a>
+                    <a href="#">Read More <i class="fa-solid  fa-arrow-right"></i></a>
+                    <a href="#">Admin <i class="fa-regular  fa-message"></i> <sub>3</sub></a>
                 </div>
-                
+
 
             </div>
 
@@ -1247,16 +1248,17 @@
                 </div>
 
                 <div class="service_text">
-                  
+
                     <h3>Scary Thing That You Don’t Get Enough Sleep</h3>
-                
+
                     <p>
-                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts.
                     </p>
                 </div>
                 <div class="orther_buttons">
-                    <a href="#">Read More <i class="fa-solid fa-beat-fade fa-arrow-right"></i></a>
-                    <a href="#">Admin <i class="fa-regular fa-beat-fade fa-message"></i> <sub>3</sub></a>
+                    <a href="#">Read More <i class="fa-solid  fa-arrow-right"></i></a>
+                    <a href="#">Admin <i class="fa-regular  fa-message"></i> <sub>3</sub></a>
                 </div>
 
             </div>
@@ -1267,16 +1269,17 @@
                 </div>
 
                 <div class="service_text">
-                    
+
                     <h3>Scary Thing That You Don’t Get Enough Sleep</h3>
-                
+
                     <p>
-                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+                        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts.
                     </p>
                 </div>
                 <div class="orther_buttons">
-                    <a href="#">Read More <i class="fa-solid fa-beat-fade fa-arrow-right"></i></a>
-                    <a href="#">Admin <i class="fa-regular fa-beat-fade fa-message"></i> <sub>3</sub></a>
+                    <a href="#">Read More <i class="fa-solid  fa-arrow-right"></i></a>
+                    <a href="#">Admin <i class="fa-regular  fa-message"></i> <sub>3</sub></a>
                 </div>
 
             </div>
@@ -1284,22 +1287,35 @@
     </section>
 
     <!-- footer -->
-
-
     <footer>
         <div class="footer_wrapper">
             <div class="first">
                 <div class="logo">
-                    <h3>Dr.Fiero</h3>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <h1 class="doc_logo">
+                        Dr.<span id="special">Fiero</span>
+                    </h1>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                        live the blind texts.</p>
                 </div>
 
                 <div class="have_questions">
-                    <h3>Have Questions</h3>
+                    <h3>Have Questions?</h3>
                     <ul>
-                        <li>203 Fake St. Mountain View, San Francisco, California, USA</li>
-                        <li>+260 974286888</li>
-                        <li>info@fierotechnologies.com</li>
+                        <li class="fa-fade">
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            Matero St. Lusaka, ZM
+                        </li>
+                        <li class="fa-fade">
+
+                            <i class="fa-solid fa-phone"></i>
+                            +260 974286888
+                        </li>
+                        <li class="fa-fade">
+                            <i class="fa-regular fa-envelope"></i>
+
+                            info@fierotechnologies.com
+                        </li>
                     </ul>
                 </div>
 
@@ -1321,66 +1337,103 @@
                 <div class="links">
                     <h3>Links</h3>
                     <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Departments</li>
-                        <li>Contacts</li>
+                        <li>
+                            <a href="#">
+                            <i class="fa-solid fa-beat-fade fa-arrow-right">
+
+                            </i> Home
+                            </a>                    </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-beat-fade fa-arrow-right"></i>About
+                            </a>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-beat-fade fa-arrow-right"></i>Services
+                            </a>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-beat-fade fa-arrow-right"></i>Departments
+                            </a>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-beat-fade fa-arrow-right"></i>Contacts
+                            </a>
                     </ul>
                 </div>
 
                 <div class="sumary_services">
                     <h3>Services</h3>
                     <ul>
-                        <li>Neurogy</li>
-                        <li>Dentist</li>
-                        <li>Ophthalmology</li>
-                        <li>Cardiology</li>
-                        <li>Surgery</li>
+                        <li>
+                            <a href="#">
+                            <i class="fa-solid fa-beat-fade fa-arrow-right"></i>Neurogy
+                            </a>                    </li>
+                        <li>
+                            <a href="#">
+                            <i class="fa-solid fa-beat-fade fa-arrow-right"></i>Dentist
+                            </a>                    </li>
+                        <li>
+                            <a href="#">
+                            <i class="fa-solid fa-beat-fade fa-arrow-right"></i>Ophthal
+                            mology
+                        </a>
+                        <li>
+                            <a href="#">
+                            <i class="fa-solid fa-beat-fade fa-arrow-right"></i>Cardiol
+                            ogy
+                        </a>
+                        <li>
+                            <a href="#">
+                            <i class="fa-solid fa-beat-fade fa-arrow-right"></i>Surgery
+                            </a>                    </li>
                     </ul>
                 </div>
             </div>
             <div class="third">
                 <div class="our_recent_blog">
+                    <h3>Recent Blog</h3>
                     <div class="first_recent_blog">
-                        <div class="image">
+                        <div class="image one">
 
                         </div>
                         <div class="contents">
-                            <h4 class="tittle"></h4>
                             <p class="content">
                                 Even the all-powerful Pointing has no control about
                             </p>
-                            <p class="links">Dec 25, 2025 Admin Read 19</p>
+                            <p class="links">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                Jan 19, 2025 <br>
+                                <i class="fa-solid fa-user-tie"></i> Admin
+                                <i class="fa-solid fa-message"></i> 19
+                            </p>
                         </div>
                     </div>
 
                     <div class="second_recent_blog">
-                        <div class="image">
+                        <div class="image two">
 
                         </div>
                         <div class="contents">
-                            <h4 class="tittle"></h4>
                             <p class="content">
                                 Even the all-powerful Pointing has no control about
                             </p>
-                            <p class="links">Dec 25, 2025 Admin Read 19</p>
+                            <p class="links">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                Jan 19, 2025 <br>
+                                <i class="fa-solid fa-user-tie"></i> Admin
+                                <i class="fa-solid fa-message"></i> 19
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="fourth">
 
-                
-
                 <div class="oppening_hours">
                     <h3 class="open">Opening Hours</h3>
-                    <p>We are open 24/7</p>
+                    <p> <i class="fa-solid fa-clock"></i> We are open 24/7</p>
                 </div>
 
                 <div class="subscribe">
                     <form action="#" method="post">
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" placeholder="Enter email address" required>
                         <button>Subscribe</button>
                     </form>
                 </div>
@@ -1388,9 +1441,17 @@
         </div>
 
         <div class="all_rights">
-            <p>
-                Copyright ©2024 All rights reserved | This template is developed
+
+            <p class="desktop_view">
+                Copyright ©2024 All rights reserved
+            <p id="tab_break">
+                | This template is developed By
+            <p class="phone_break">
+                Fiero Technologies
             </p>
+            </p>
+            </p>
+
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
