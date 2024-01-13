@@ -739,6 +739,7 @@ aside {
   padding: 70px 0;
   position: relative;
   z-index: 1;
+  
 }
 
 aside::before {
@@ -762,7 +763,10 @@ aside .aside_container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  
 }
+
+
 
 aside .aside_container p {
   text-transform: uppercase;
@@ -807,6 +811,21 @@ aside .aside_container .right {
   display: flex;
   justify-content: center;
   z-index: 10;
+}
+
+@media all and (max-width:850px){
+  aside .aside_container {
+    flex-direction: column;
+  }
+
+  aside .aside_container .left {
+    width: 100%;
+  }
+
+  aside .aside_container .right {
+    width: 100%;
+  }
+  
 }
 
 @media screen and (max-width: 400px) {
@@ -2224,6 +2243,7 @@ gap: 17px;
 .third .our_recent_blog i{
   display: inline-block;
   color: gray;
+  margin:0 5px;
 }
 
 .third .our_recent_blog .content{

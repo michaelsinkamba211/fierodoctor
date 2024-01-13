@@ -190,3 +190,34 @@ function updateCount() {
 
 // Call the function to start the counting process
 updateCount();
+
+function solution(str){
+  
+}
+
+function solution(str){
+  const string = str.slice("");
+  const newString = [];
+  
+  for(let i = 0; i < string.length; i++){
+    console.log(string[i]);
+    newString.push(string[i]);
+  }
+  console.log(newString.reverse);
+}
+
+solution = (str) => {
+
+  const string = str.slice("");
+  const newString = [];
+  
+  for(let i = 0; i < string.length; i++){
+//     console.log(string[i]);
+    newString.push(string[i]);
+  }
+  return newString.reverse().join("");
+}
+
+
+
+solution('michael');
