@@ -165,28 +165,76 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(aboutSection);
 
 
-// counting for the dotation part
+// for nav bar clicking off and on
+const menuInput = document.getElementById('menu'); // input
+const mainUl = document.querySelector('.second_header nav .phone_hide'); // links holder
+const navLink = mainUl.querySelectorAll('li a');
 
-// JavaScript
-// JavaScript
-const amountElement = document.getElementById("amount");
-const targetCount = parseInt(amountElement.getAttribute("data-counts"), 10);
+// Function to close the menu
+const closeMenu = () => {
+  mainUl.style.display = 'none'; // Hide the main-ul
+  menuInput.checked = false; // Uncheck the .menu input
+  console.log("Close Menu function working"); 
+};
 
-let currentCount = 0;
-
-// Function to update the count
-function updateCount() {
-  if (currentCount < targetCount) {
-    currentCount += 1;
-
-    // Format the number with commas and append 'k'
-    amountElement.textContent = "k" + currentCount.toLocaleString();
-
-    // Call the function again after a delay to create a counting effect
-    setTimeout(updateCount, 10);
+// Function to handle the menu behavior for larger screens
+const handleLargeScreens = () => {
+  if (window.innerWidth >= 1000) {
+    mainUl.style.display = 'block'; // Show the main-ul
+  } else {
+    mainUl.style.display = menuInput.checked ? 'block' : 'none'; // Show if checked, hide if not
   }
-}
+};
 
-// Call the function to start the counting process
-updateCount();
+// Initially handle the menu behavior for larger screens
+handleLargeScreens();
 
+// Add event listeners to the navigation links to close the menu
+navLink.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth < 1000) {
+      closeMenu();
+    }
+  });
+});
+
+// Add an event listener to the .menu input for toggling visibility
+menuInput.addEventListener('change', () => {
+  handleLargeScreens();
+});
+
+// Add an event listener to the window resize event for larger screens
+window.addEventListener('resize', handleLargeScreens);
+
+
+
+
+// numbers counting
+document.addEventListener('DOMContentLoaded', function () {
+  const counters = document.querySelectorAll('.numberz');
+  const duration = 7000; // Set the total duration for counting in milliseconds
+  const animationInterval = 10; // Set the interval for updating the count in milliseconds
+
+  counters.forEach(counter => {
+      const target = +counter.getAttribute('data-count');
+      const count = +counter.innerText;
+      const steps = Math.ceil(duration / animationInterval);
+      const inc = (target - count) / steps;
+
+      let currentCount = count;
+      let step = 0;
+
+      const updateCount = () => {
+          currentCount += inc;
+          counter.innerText = Math.ceil(currentCount);
+
+          if (++step < steps) {
+              setTimeout(updateCount, animationInterval);
+          } else {
+              counter.innerText = target;
+          }
+      };
+
+      updateCount();
+  });
+});

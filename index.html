@@ -86,7 +86,6 @@
                         </div>
                     </button>
 
-
                     <div class="phone_hide">
                         <ul>
                             <li><a href="#home" id="first">home</a></li>
@@ -107,9 +106,6 @@
 
 
                 </nav>
-
-
-
             </div>
         </div>
     </header>
@@ -1036,13 +1032,16 @@
                             <option value="heart_rate">HEART RATE</option>
                             <option value="emergency_care">Emergency Care</option>
                         </select>
-                        <input type="date" id="dob" name="dob" value="yyyy-mm-dd" required>
-                        <textarea name="" id="" cols="40" rows="2">Message</textarea>
+
+                        
+                        <input type="date" id="dob" name="dob" required>
+                        <textarea name="message" id="message" cols="40" rows="2" placeholder="Message"></textarea>
+                       
                     </div>
 
                     <div class="right">
                         <input type="text" name="lastname" id="lastname" value="Last Name" required>
-                        <input type="number" name="phone" id="phone" placeholder="+26" required>
+                        <input type="number" name="phone" id="phone" value="+26" required>
 
 
                         <select id="time" name="time">
@@ -1061,20 +1060,20 @@
             <div class="second">
                 <div class="all_divs">
                     <div class="years">
-                        <h3 class="numbers" data-count="30">30</h3>
-                        <p>Years of Experience</p>
+                        <p class="numberz" data-count="30"></p>
+                        <p class="pa">Years of Experience</p>
                     </div>
                     <div class="patients">
-                        <h3 class="numbers" data-count="500">500</h3>
-                        <p>Happy Patients</p>
+                        <p class="numberz" data-count="500"></p>
+                        <p class="pa">Happy Patients</p>
                     </div>
                     <div class="doctor">
-                        <h3 class="numbers" data-count="50">50</h3>
-                        <p>Number of Doctors</p>
+                        <p class="numberz" data-count="50"></p>
+                        <p class="pa">Number of Doctors</p>
                     </div>
                     <div class="staffs">
-                        <h3 class="numbers" data-count="300">300</h3>
-                        <p>Number of Staffs</p>
+                        <p class="numberz" data-count="300"></p>
+                        <p class="pa">Number of Staffs</p>
                     </div>
                 </div>
             </div>
@@ -1084,7 +1083,8 @@
         </div>
     </section>
     <!-- pricings -->
-    <section class="pricing" id="pricing>
+    <section class="pricing" id="pricing">
+ 
         <div class="ti">
             <p class="sub_title">PRICING</p>
 
