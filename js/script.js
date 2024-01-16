@@ -165,6 +165,28 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(aboutSection);
 
 
+// counting for the dotation part
 
+// JavaScript
+// JavaScript
+const amountElement = document.getElementById("amount");
+const targetCount = parseInt(amountElement.getAttribute("data-counts"), 10);
 
+let currentCount = 0;
+
+// Function to update the count
+function updateCount() {
+  if (currentCount < targetCount) {
+    currentCount += 1;
+
+    // Format the number with commas and append 'k'
+    amountElement.textContent = "k" + currentCount.toLocaleString();
+
+    // Call the function again after a delay to create a counting effect
+    setTimeout(updateCount, 10);
+  }
+}
+
+// Call the function to start the counting process
+updateCount();
 
