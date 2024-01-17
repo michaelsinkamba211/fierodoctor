@@ -249,7 +249,7 @@ const contactForm = document.querySelector("#contact-form");
 const submitBtn = document.querySelector(".submit-btn");
 const nameInput = document.querySelector("#user_name");
 const emailInput = document.querySelector("#user_email");
-const messageInput = document.querySelector("#message");
+const messageInput = document.querySelector("#information");
 
 // get needed datafrom email JS
 
