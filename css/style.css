@@ -442,6 +442,8 @@ section .home_contents {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  font-weight: 900;
+  font-family: "Open Sans";
 }
 
 @media all and (max-width: 1000px) {
@@ -492,6 +494,7 @@ section .home_contents {
   width: fit-content;
   padding: 10px;
   border-radius: 20px;
+  font-weight: 500;
 }
 
 .home .home_view_our_works:hover {
@@ -629,6 +632,8 @@ section.services {
   grid-area: content;
   padding-left: 50px;
   padding-top: 40px;
+  font-weight: 600;
+  font-family: 'Open Sans' !important;
 }
 
 @media all and (max-width: 1100px) {
@@ -928,6 +933,11 @@ aside .aside_container .right {
   text-align: center;
   margin: 0 5px;
   margin-bottom: 40px;
+}
+
+.ti{
+  font-weight: 600;
+  font-family: 'Open Sans' !important;
 }
 
 .department_section h1 {
@@ -1717,14 +1727,28 @@ font-family: Prompt, sans-serif !important;
 
 .second .all_divs div .numberz {
   font-size: 2.8rem;
-  font-weight: 900;
   color: var(--primary-color);
+  font-weight: 900;
+  font-family: "Open Sans";
 }
 
 .second .all_divs div .pa {
   font-weight: 500;
   font-size: 1rem;
   color: rgba(0, 0, 0, 0.8);
+}
+
+
+ /* Add your styles here */
+ #datepicker-container {
+  position: relative;
+  display: inline-block;
+}
+
+#datepicker {
+  display: none;
+  position: absolute;
+  z-index: 1;
 }
 
 /* styling facts */
