@@ -1,0 +1,50 @@
+/* for all sections */
+
+.box {
+    transition: all .3s ease-out;
+    transform: translateY(5%);
+    opacity: 0;
+}
+.box:nth-of-type(even) {
+    transform: translateY(5%);
+}
+
+.box.animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* for services */
+
+.ani_service {
+    transition: all .2s ease-in;
+    transform: translateX(-10%);
+    transform: translateY(10%);
+    opacity: 0;
+}
+.ani_service:nth-of-type(even) {
+    transform: translateX(-10%);
+    transform: translateY(10%);
+}
+
+.ani_service.animate_service {
+    transform: translate(0);
+    opacity: 1;
+}
+
+/* for small boxes in about */
+/* .onez {
+    transition: all .3s ease-out;
+    transform: translateY(15%);
+    opacity: 0;
+    background: transparent;
+}
+.onez:nth-of-type(even) {
+    transform: translateY(15%);
+}
+
+.onez.animate_onez {
+    transform: translateY(0);
+    opacity: 1;
+} */

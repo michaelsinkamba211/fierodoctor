@@ -1,22 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   var lastScrollTop = 0;
-//   var header = document.querySelector("header");
-
-//   window.addEventListener("scroll", function () {
-//     var st = window.scrollY || document.documentElement.scrollTop;
-
-//     if (st > lastScrollTop) {
-//       // Scrolling down, hide the header
-//       header.classList.add("hide");
-//     } else {
-//       // Scrolling up, show the header
-//       header.classList.remove("hide");
-//     }
-
-//     lastScrollTop = st;
-//   });
-// });
-
 function showContent(event, sectionId) {
   event.preventDefault();
 
@@ -261,16 +242,12 @@ $(function () {
   });
 });
 
-
-
-
-
 // my email js details
-// email js 
+// email js
 
 const contactForm = document.querySelector("#contact-form");
 const submitBtn = document.querySelector(".submit-btn");
-const nameInput =document.querySelector("#user_name");
+const nameInput = document.querySelector("#user_name");
 const emailInput = document.querySelector("#user_email");
 const messageInput = document.querySelector("#message");
 
@@ -283,72 +260,74 @@ const templateID = "template_c8idzek";
 // initialize email JS with public key
 emailjs.init(publicKey);
 
-
 // add submit event to the form
 
-contactForm.addEventListener("submit", e => {
-    // prevent form default behaviour
-    e.preventDefault();
+contactForm.addEventListener("submit", (e) => {
+  // prevent form default behaviour
+  e.preventDefault();
 
-    // Change button text
+  // Change button text
 
-    submitBtn.innerText = "Just A Moment...";
+  submitBtn.innerText = "Just A Moment...";
 
-    // get all input field values
+  // get all input field values
 
-    const inputFields = {
-        name: nameInput.value,
-        email: emailInput.value,
-        message: messageInput.value
+  const inputFields = {
+    name: nameInput.value,
+    email: emailInput.value,
+    message: messageInput.value,
+  };
+
+  /*send the email (adding service , template id and input fields)
+   */
+
+  emailjs.send(serviceID, templateID, inputFields).then(
+    () => {
+      // changing button text
+      submitBtn.innerText = "Message Sent Successfully";
+
+      // let clear all inputs
+      nameInput.value = "";
+      emailInput.value = "";
+      messageInput.value = "";
+
+      setTimeout(() => {
+        submitBtn.innerText = "Send Message";
+      }, 2000);
+    },
+    (error) => {
+      // console erro
+      console.log(error);
+      // change button  text for error
+      submitBtn.innerText = "Something went wrong";
+
+      // addingclearn inputs after error
+      // let clear all inputs
+      nameInput.value = "";
+      emailInput.value = "";
+      messageInput.value = "";
+
+      setTimeout(() => {
+        submitBtn.innerText = "Send Again";
+      }, 2000);
+
+      // ends here
     }
-
-    /*send the email (adding service , template id and input fields)
-    */ 
-
-    emailjs.send(serviceID, templateID, inputFields)
-    .then(() => {
-        // changing button text
-        submitBtn.innerText = "Message Sent Successfully";
-        
-        // let clear all inputs 
-        nameInput.value = "";
-        emailInput.value = "";
-        messageInput.value = "";
-
-        setTimeout(() => {
-            submitBtn.innerText = "Send Message";
-        }, 2000);
-
-    }, (error) => {
-        // console erro
-        console.log(error);
-        // change button  text for error
-        submitBtn.innerText = "Something went wrong";
-
-         // addingclearn inputs after error
-         // let clear all inputs 
-        nameInput.value = "";
-        emailInput.value = "";
-        messageInput.value = "";
-
-        setTimeout(() => {
-            submitBtn.innerText = "Send Again";
-        }, 2000);
-
-        // ends here
-    });
+  );
 });
 
 // validation
 
 function validateForm() {
-    var name = document.getElementById("user_name").value;
-    var email = document.getElementById("user_email").value;
+  var name = document.getElementById("user_name").value;
+  var email = document.getElementById("user_email").value;
 
-    if (name === "" || email === "") {
-        alert("Name and email are required fields.");
-        return false;
-    }
+  if (name === "" || email === "") {
+    alert("Name and email are required fields.");
+    return false;
+  }
 
-    return true;
+  return true;
 }
+
+

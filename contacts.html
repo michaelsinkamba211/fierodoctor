@@ -12,7 +12,7 @@
     <!-- fonts icons start-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <script src="https://kit.fontawesome.com/018d9ba538.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+
     <!-- fonts  end-->
 
     <!-- font family -->
@@ -24,6 +24,7 @@
     <!-- styles start-->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/animation.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <!-- styles end -->
     <!-- jQuery -->
@@ -307,7 +308,7 @@
     </section>
     
     <!-- contacts -->
-    <section class="contacts" id="contacts">
+    <section class="contacts box" id="contacts">
         <div class="contact_wrapper">
             <div class="first">
                 <div class="ti">
@@ -391,8 +392,8 @@
             <p></p>
         </div>
 
-        <div class="kontact_wrapper">
-            <div class="number">
+        <div class="kontact_wrapper ">
+            <div class="number box">
                 <div>
                     <p class="name">
                         <!-- icon -->
@@ -442,7 +443,7 @@
 
 
 
-            <div class="messages">
+            <div class="messages box">
                 <form id="contact-form" onsubmit="return validateForm()">
                     <input type="text" id="user_name" name="name" class="name" placeholder="Your Name" required>
                     <input type="email" id="user_email" name="email" class="email" placeholder="Your Email" required>
@@ -452,7 +453,7 @@
                 </form>
             </div>
 
-            <div class="google_map">
+            <div class="google_map box">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d483.28109211423043!2d28.555708819353512!3d-14.296975304547946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x196ab7f8d27eac35%3A0x3562ea1bf9a3fb14!2sLuapula%20Hostel!5e0!3m2!1sen!2szm!4v1705472489786!5m2!1sen!2szm"
                     style="border:0;" allowfullscreen="" loading="lazy"
@@ -636,6 +637,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/animation.js"></script>
 </body>
 
 </html>

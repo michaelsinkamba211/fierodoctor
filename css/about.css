@@ -124,6 +124,8 @@ section .wrapper {
     gap: 20px;
     margin-top: 30px;
   }
+
+
   
   @media screen and (min-width:816px){
     .kontact_wrapper .google_map {
@@ -197,14 +199,13 @@ section .wrapper {
   
   
   .kontact_wrapper .google_map iframe{
-    /* background-color: red; */
     width: 100%;
     height: 400px;
-    
   }
   
   .kontact_wrapper .google_map{
     border: 1px solid var(--primary-color);
+    height: 400px;
   }
   
   /* lets  do messages */

@@ -202,6 +202,7 @@ header .essential_container .logo {
 header .essential_container .doc_logo {
   font-weight: 900;
   font-size: 1.29rem;
+    font-family: 'Open Sans';
 }
 
 header .essential_container .address {
@@ -2192,7 +2193,8 @@ footer .all_rights{
 }
 
 .footer_wrapper .doc_logo {
-  font-weight: 900;
+  font-family: 'Open Sans';
+  font-weight: 900 !important;
   font-size: 1.29rem;
   color: var(--main-color);
   margin-bottom: 20px;
