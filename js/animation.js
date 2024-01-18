@@ -46,28 +46,6 @@ function checkBoxesServices() {
 
 // for small boxes
 
-
-
-// const onex = document.querySelectorAll(".onez");
-// window.addEventListener("scroll", checkBoxesOnez);
-// checkBoxesOnez();
-
-// function checkBoxesOnez() {
-//   const triggerBottom = (window.innerHeight / 5) * 4;
-
-//   onex.forEach((box) => {
-//     const boxTop = box.getBoundingClientRect().top;
-
-//     if (boxTop < triggerBottom) {
-//       box.classList.add("animate_onez");
-//       console.log(window.innerHeight);
-//     } else {
-//       box.classList.remove("animate_onez");
-//     }
-//   });
-// }
-
-
 const brahs = document.querySelectorAll(".service");
 window.addEventListener("scroll", checkBrahs);
 checkBrahs();
@@ -86,3 +64,17 @@ function checkBrahs() {
     }
   });
 }
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    $("header").css("display", "flex");
+    $("header").css("flex-direction", "column");
+  } else {
+
+    $("header").css("display", "none");
+  }
+  prevScrollpos = currentScrollPos;
+};
+
