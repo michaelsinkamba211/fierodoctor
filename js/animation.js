@@ -66,3 +66,23 @@ function checkBoxesServices() {
 //     }
 //   });
 // }
+
+
+const brahs = document.querySelectorAll(".service");
+window.addEventListener("scroll", checkBrahs);
+checkBrahs();
+
+function checkBrahs() {
+  const triggerBottom = (window.innerHeight / 5) * 4;
+
+  brahs.forEach((box) => {
+    const boxTop = box.getBoundingClientRect().top;
+
+    if (boxTop < triggerBottom) {
+      box.classList.add("animate_brah");
+      console.log(window.innerHeight);
+    } else {
+      box.classList.remove("animate_brah");
+    }
+  });
+}

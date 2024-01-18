@@ -48,3 +48,59 @@
     transform: translateY(0);
     opacity: 1;
 } */
+
+
+
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(20%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .service {
+    transition: all 0.2s ease-in;
+    transform: translateX(-10%) translateY(10%);
+    opacity: 0;
+  }
+  
+  .service:nth-of-type(odd) {
+    animation: slideInFromLeft 1s ease-in-out;
+  }
+  
+  .service:nth-of-type(even) {
+    animation: slideInFromRight 1s ease-in-out;
+  }
+  
+  .service.animate_brah {
+    transform: translate(0);
+    opacity: 1;
+  }
+  
+  
