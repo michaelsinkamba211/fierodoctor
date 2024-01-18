@@ -33,22 +33,6 @@
     opacity: 1;
 }
 
-/* for small boxes in about */
-/* .onez {
-    transition: all .3s ease-out;
-    transform: translateY(15%);
-    opacity: 0;
-    background: transparent;
-}
-.onez:nth-of-type(even) {
-    transform: translateY(15%);
-}
-
-.onez.animate_onez {
-    transform: translateY(0);
-    opacity: 1;
-} */
-
 
 
 @keyframes slideInFromLeft {
@@ -84,21 +68,21 @@
     }
   }
   
-  .service {
-    transition: all 0.2s ease-in;
+  .brah {
+    transition: all 0.2s ease-in-out;
     transform: translateX(-10%) translateY(10%);
     opacity: 0;
   }
   
-  .service:nth-of-type(odd) {
+  .brah:nth-of-type(odd) {
     animation: slideInFromLeft 1s ease-in-out;
   }
   
-  .service:nth-of-type(even) {
+  .brah:nth-of-type(even) {
     animation: slideInFromRight 1s ease-in-out;
   }
   
-  .service.animate_brah {
+  .brah.animate_brah {
     transform: translate(0);
     opacity: 1;
   }
@@ -110,8 +94,9 @@
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
   }
+
 
 
 

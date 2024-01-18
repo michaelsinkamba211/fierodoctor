@@ -119,8 +119,14 @@ header.hide {
 }
 
 @media screen and (max-width: 400px) {
-  .first_header .essential_container :is(.location, .email, .phone) {
+  .first_header .essential_container :is(.location, .email) {
     display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .first_header  .phone {
+    display: none !important;
   }
 }
 
@@ -1432,7 +1438,10 @@ aside .aside_container .right {
   }
 }
 
-.contact_wrapper ::after {
+
+
+
+.contact_wrapper:after {
   content: "";
   position: absolute;
   width: 50%;
@@ -1440,10 +1449,11 @@ aside .aside_container .right {
   top: 0;
   left: 0;
   background-color: var(--primary-color);
+  
   z-index: -1;
 }
 
-.contact_wrapper ::before {
+.contact_wrapper::before {
   content: "";
   position: absolute;
   width: 50%;
@@ -1554,8 +1564,8 @@ aside .aside_container .right {
     grid-column: 12/13;
   }
 
-  .contact_wrapper ::after, 
-  .contact_wrapper ::before{
+  .contact_wrapper::after, 
+  .contact_wrapper::before{
     width: 100%;
     background-color: transparent;
   }
@@ -1702,8 +1712,6 @@ font-weight: 500 !important;
 font-family: Prompt, sans-serif !important;
 }
 
-/* number of staffs guy */
-
 
 
 .contacts .contact_wrapper .second .all_divs {
@@ -1715,7 +1723,7 @@ font-family: Prompt, sans-serif !important;
   height: 100%;
 }
 
-.contacts .contact_wrapper .second .all_divs div {
+.contacts .contact_wrapper .second .all_divs .brah {
   background-color: #fafafa;
   height: 200px;
   width: 100%;
@@ -1725,6 +1733,11 @@ font-family: Prompt, sans-serif !important;
   align-items: center;
   justify-content: center;
 }
+
+/* .contact_wrapper .second .brah{
+  background-color: red !important;
+} */
+
 
 
 .form ::placeholder {
@@ -1737,6 +1750,7 @@ font-family: Prompt, sans-serif !important;
   font-weight: bolder;
   
 }
+
 
 
 
