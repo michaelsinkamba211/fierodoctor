@@ -1637,7 +1637,7 @@ aside .aside_container .right {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
   height: 70px;
   background: transparent;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8) !important;
   font-size: 1rem !important;
   box-shadow: none !important;
   font-weight: 500 !important;
@@ -1726,6 +1726,21 @@ font-family: Prompt, sans-serif !important;
   justify-content: center;
 }
 
+
+.form ::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  background: transparent;
+  font-weight: 500 !important;
+}
+
+.form #message{
+  font-weight: bolder;
+  
+}
+
+
+
+
 .second .all_divs div .numberz {
   font-size: 2.8rem;
   color: var(--primary-color);
@@ -1773,6 +1788,7 @@ font-family: Prompt, sans-serif !important;
   font-size: 16px;
   background-color: #fafafa !important;
 }
+
 
 
 /* pricing */
