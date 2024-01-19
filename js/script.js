@@ -373,13 +373,13 @@ function sendToWhatsapp(event) {
   event.preventDefault();
 
   // Get input values
-  let firstName = document.getElementById("firstname").value;
-  let lastName = document.getElementById("lastname").value;
-  let services = document.querySelector(".services_app").value;
-  let date = document.getElementById("datepicker-input").value;
-  let message = document.getElementById("message").value;
-  let phone = document.getElementById("phone").value;
-  let time = document.querySelector(".time_appo").value;
+  let firstName = document.getElementById("firstname").value.toUpperCase();
+  let lastName = document.getElementById("lastname").value.toUpperCase();
+  let services = document.querySelector(".services_app").value.toUpperCase();
+  let date = document.getElementById("datepicker-input").value.toUpperCase();
+  let message = document.getElementById("message").value.toUpperCase();
+  let phone = document.getElementById("phone").value.toUpperCase();
+  let time = document.querySelector(".time_appo").value.toUpperCase();
 
   // Basic validation
   if (!firstName || !lastName || !services || !date || !message || !phone || !time) {
@@ -389,6 +389,8 @@ function sendToWhatsapp(event) {
 
   // Construct message
   let messageText =
+    "APPOINTMENT REQUEST" +
+     "\n" +
     "Name: " + firstName + " " + lastName + "\n" +
     "Services: " + services + "\n" +
     "Date: " + date + "\n" +
@@ -397,7 +399,7 @@ function sendToWhatsapp(event) {
     "Time: " + time;
 
   // Ask for confirmation
-  if (confirm("Are you sure you want to send the following details?\n\n" + messageText)) {
+  if (confirm("Are you sure you want to send the following details?\n\n " + messageText)) {
     // If user clicks "OK," then proceed to open WhatsApp link
     let number = "+260974286888";
     let url = "https://wa.me/" + number + "?text=" + encodeURIComponent(messageText);
@@ -410,6 +412,5 @@ function sendToWhatsapp(event) {
   // Return false to prevent form submission
   return false;
 }
-
 
 
